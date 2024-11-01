@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: btc-reward-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: btc-reward-app
+  template:
+    metadata:
+      labels:
+        app: btc-reward-app
+    spec:
+      containers:
+      - name: frontend
+        image: your-frontend-image
+        ports:
+        - containerPort: 80
+      - name: backend
+        image: your-backend-image
+        ports:
+        - containerPort: 5000
