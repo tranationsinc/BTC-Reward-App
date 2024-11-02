@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         AWS_ACCOUNT_ID = credentials('AWS_ACCOUNT_ID')
-        AWS_REGION = 'us-east-1'
+        AWS_REGION = 'us-west-2'
         ECR_REPO_NAME = 'btc-reward-app'
         CLUSTER_NAME = 'my-eks-cluster'
     }
